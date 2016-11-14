@@ -1,0 +1,19 @@
+.logo {
+  text-align: center;
+}
+.btn {
+  float:right;
+  margin:5px;
+  background-color:transparent;
+  color: black;
+  border: none;
+}
+#createAccount {
+  float:right;
+}
+.loginCreate {
+  display:block;
+}
+.form-group {
+  
+}

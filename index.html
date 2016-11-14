@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app ='hiveApp'>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Public/Styles/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="mainCtrl">
+
+    <div ui-view></div>
+  <footer class="footerContainer">
+<div class="information"></div>
+<div class="emptyPlaceholder"></div>
+<div class="connect"></div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <script src="./Public/js/app.js"></script>
+  <script src="./Public/js/mainCtrl.js"></script>
+  <script src="./Public/js/mainService.js"></script>
+  <script src="./Public/Routes/Home/homeCtrl.js"></script>
+  <script src="./Public/Routes/Cart/cartCtrl.js"></script>
+  <script src="./Public/Routes/Customer/customerCtrl.js"></script>
+  <script src="./Public/Routes/Products/productsCtrl.js"></script>
+  <script src="./Public/Routes/productDetails/productDetailsCtrl.js"></script>
+  <script src="./Public/Routes/Login/loginCtrl.js"></script>
+  <script src="./Public/Routes/About/aboutCtrl.js"></script>
+
+
+  </body>
+</html>
