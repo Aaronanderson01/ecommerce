@@ -40,6 +40,25 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: '/about',
     templateUrl: '/Public/Routes/About/aboutTmpl.html',
     controller: 'aboutCtrl'
+  })
+  .state('contact', {
+    url: '/contact',
+    templateUrl: '/Public/Routes/Contact/contactTmpl.html',
+    controller: 'contactCtrl'
+  })
+  .state('pillows', {
+    url: '/pillows',
+    templateUrl: '/Public/Routes/Pillows/pillowsTmpl.html',
+    controller: 'pillowsCtrl'
+  })
+  .state('weavings', {
+    url: '/weavings',
+    templateUrl: '/Public/Routes/Weavings/weavingsTmpl.html',
+    controller: 'weavingsCtrl'
+  })
+  .state('rugs', {
+    url: '/rugs',
+    templateUrl: '/Public/Routes/Rugs/rugsTmpl.html',
+    controller: 'rugsCtrl'
   });
-
 });
