@@ -1,0 +1,6 @@
+<div ng-repeat="pillow in pillows">
+<div>  {{pillow.product_name}}
+<img ng-src="{{pillow.product_image}}" ui-sref="productDetails({id: pillow.product_id})" >
+<div class="pillowDescription">{{pillow.product_description}}</textarea>
+<div>{{pillow.product_price}}</div>
+</div>

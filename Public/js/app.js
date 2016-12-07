@@ -17,7 +17,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   controller: 'productsCtrl'
 })
   .state('productDetails', {
-    url: '/productDetails',
+    url: '/productDetails/:id',
     templateUrl: './Public/Routes/productDetails/productDetailsTmpl.html',
     controller:('productDetailsCtrl')
   })
@@ -47,18 +47,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller: 'contactCtrl'
   })
   .state('pillows', {
+    parent: 'products',
     url: '/pillows',
     templateUrl: '/Public/Routes/Pillows/pillowsTmpl.html',
     controller: 'pillowsCtrl'
   })
   .state('weavings', {
+    parent:'products',
     url: '/weavings',
     templateUrl: '/Public/Routes/Weavings/weavingsTmpl.html',
     controller: 'weavingsCtrl'
   })
   .state('rugs', {
+    parent:'products',
     url: '/rugs',
     templateUrl: '/Public/Routes/Rugs/rugsTmpl.html',
     controller: 'rugsCtrl'
   });
+
 });
