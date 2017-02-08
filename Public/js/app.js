@@ -9,12 +9,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('home', {
     url: '/home',
     templateUrl: './Public/Routes/home/homeTmpl.html',
-    controller: 'homeCtrl'
+    controller: 'homeCtrl',
+    resolve: {
+      hide: function(){
+        return false;
+      }
+    }
   })
   .state('products', {
   url: '/products',
   templateUrl: './Public/Routes/Products/productsTmpl.html',
   controller: 'productsCtrl'
+  // resolve: {
+  //   hide: function(){
+  //     return false;
+  //   }
+  // }
 })
   .state('productDetails', {
     url: '/productDetails/:id',
@@ -47,19 +57,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller: 'contactCtrl'
   })
   .state('pillows', {
-    parent: 'products',
+    // parent: 'products',
     url: '/pillows',
     templateUrl: '/Public/Routes/Pillows/pillowsTmpl.html',
     controller: 'pillowsCtrl'
   })
   .state('weavings', {
-    parent:'products',
+    // parent:'products',
     url: '/weavings',
     templateUrl: '/Public/Routes/Weavings/weavingsTmpl.html',
     controller: 'weavingsCtrl'
   })
   .state('rugs', {
-    parent:'products',
+    // parent:'products',
     url: '/rugs',
     templateUrl: '/Public/Routes/Rugs/rugsTmpl.html',
     controller: 'rugsCtrl'

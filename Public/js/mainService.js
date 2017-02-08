@@ -20,5 +20,19 @@ this.getProductById = function(id){
   });
   return dfd.promise;
 };
-
+this.postAddress = function(){
+  var dfd = $q.defer();
+  $http.post('/api/addressList').then(function(res){
+    dfd.resolve(res);
+  });
+  return dfd.promise;
+};
+this.getEtsy = function(){
+  return $http({
+method: 'GET',
+URL: 'https://openapi.etsy.com/v2/users/68552465/'
+}) .then(function(response){
+      return response;
+    });
+  };
 });

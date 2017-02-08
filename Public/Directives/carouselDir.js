@@ -6,4 +6,5 @@ angular.module("hiveApp").directive('carouselDir', function() {
     templateUrl: './Public/Directives/carouselTmpl.html',
     controller: 'carouselCtrl'
   };
+
 });

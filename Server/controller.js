@@ -31,6 +31,11 @@ db.getProducts(function(err, products){
             res.send('successful');
     });
   },
+	postAddress: function(req, res, next){
+		db.getEmail(function(err, emails){
+			res.send(emails);
+		});
+	},
   getProductById: function(req, res, next){
     db.getProductById([req.params.id],function(err, product){
       res.send(product);

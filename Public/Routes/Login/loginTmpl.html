@@ -1,8 +1,16 @@
 <div class="form-group">
+  <form ng-submit="addressList()">
+  <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name">
+</div>
+<div class="form-group">
   <label for="usr">Email:</label>
-  <input type="text" class="form-control" id="usr">
+  <input type="text" class="form-control"ng-model="address" id="usr">
 </div>
 <div class="form-group">
   <label for="pwd">Password:</label>
   <input type="password" class="form-control" id="pwd">
+<input type="submit"></input>
+</form>
 </div>
+{{address}}

@@ -1,11 +1,15 @@
+<div class="logo"><h1 id="title">HIVE HOUSE</h1>
+</div>
+
 <div class="navContainer">
   <nav class="navBar" id="productsNavBar">
-    <ul>
-      <li><button ui-sref="pillows">Pillows</button></li>
-      <li><button ui-sref="weavings">Weavings</button></li>
-      <li><button ui-sref="rugs">Rugs</button></li>
+    <ul id="list">
+      <li class="pillowsButton"><button class="btn"><a ui-sref="pillows">Pillows</a></button></li>
+      <li class="weavingsButton"><button class="btn"><a  ui-sref="weavings">Weavings</a></button></li>
+      <li class="rugsButton"><button class="btn"><a ui-sref="rugs">Rugs</a></button></li>
+
     </ul>
     <hr>
 </div>
-<carousel-dir></carousel-dir>
+<!-- <carousel-dir ng-hide="hide"></carousel-dir> -->
 <ui-view></ui-view>

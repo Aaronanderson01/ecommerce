@@ -31,6 +31,7 @@ var secret = {
 app.use(session(secret));
 
 app.post('/api/products', controller.postProducts);
+app.post('/api/addressList', controller.postAddress);
 app.get('/api/products', controller.getProducts);
 app.put('/api/products', controller.updateProducts);
 app.get('/api/products/:id', controller.getProductById);

@@ -2,7 +2,7 @@
 // ============================================================
 angular.module("hiveApp").controller("carouselCtrl", function($scope) {
 
-  var picArray = ['/img1.jpg', 'img2.jpg', 'img3.jpg'];
+  var picArray = ['DSC_0087.JPG', 'IMG_6460.JPG', 'IMG_6549.JPG','IMG_6587.JPG', 'IMG_6673.JPG', 'IMG_9057.JPG'];
 
 
 $scope.carousel = function(){

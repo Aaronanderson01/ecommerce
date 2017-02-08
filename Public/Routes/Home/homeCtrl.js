@@ -1,5 +1,6 @@
-angular.module('hiveApp').controller('homeCtrl', function($scope, $state, $location){
-
+angular.module('hiveApp').controller('homeCtrl', function($scope, $state, $location, hide){
+$scope.hide = hide;
+console.log(hide);
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
 //   $scope.myFunction = function() {
@@ -22,6 +23,6 @@ angular.module('hiveApp').controller('homeCtrl', function($scope, $state, $locat
 //   };
 //
 $scope.toProducts = function(){
-  
+
 }
 });
