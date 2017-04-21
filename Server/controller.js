@@ -41,6 +41,12 @@ db.getProducts(function(err, products){
       res.send(product);
     });
   },
+	// getEtsy: function(req, res, next){
+	// 	db.getEtsy(function(err, products) {
+	// 		console.log(err,products);
+	// 		res.send(products);
+	// 	});
+	// },
   // REGISTER USER //
 	register: function(req, res, next) {
 		var user = req.body;
@@ -64,69 +70,69 @@ db.getProducts(function(err, products){
 			res.status(200)
 				.send(user);
 		});
-	},
-
-
-
-	// // READ USER //
-	// read: function(req, res, next) {
-	// 	// List the column names that you want the search to grab
-	// 	var searchOptions = {
-	// 		columns: ['id', 'name', 'email']
-	// 	};
+	// },
 	//
-	// 	db.users.find(req.query, searchOptions, function(err, users) {
+	//
+	//
+	// // // READ USER //
+	// // read: function(req, res, next) {
+	// // 	// List the column names that you want the search to grab
+	// // 	var searchOptions = {
+	// // 		columns: ['id', 'name', 'email']
+	// // 	};
+	// //
+	// // 	db.users.find(req.query, searchOptions, function(err, users) {
+	// // 		if (err) {
+	// // 			console.log('User read error: ', err);
+	// //
+	// // 			return res.status(401)
+	// // 				.send(err);
+	// // 		}
+	// //
+	// // 		res.status(200)
+	// // 			.json(users);
+	// // 	});
+	// // },
+	//
+	// // RETURN CURRENT USER //
+	// me: function(req, res, next) {
+	// 	// If user isnt on the session, then return error status
+	// 	if (!req.user) {
+	// 		console.log('Current user not found');
+	//
+	// 		return res.status(401)
+	// 			.send('current user not defined');
+	// 	}
+	//
+	// 	// Remove password for security
+	// 	var user = req.user;
+	//
+	// 	delete user.password;
+	//
+	// 	// Return user
+	// 	return res.status(200)
+	// 		.json(user);
+	// },
+	//
+	// update: function(req, res, next) {
+	// 	console.log('Starting update');
+	//
+	// 	var updateUser = req.body;
+	// 	updateUser.id = req.user.id;
+	// 	db.users.save(updateUser, function(err, user) {
 	// 		if (err) {
-	// 			console.log('User read error: ', err);
+	// 			console.log('User update error', err);
 	//
 	// 			return res.status(401)
 	// 				.send(err);
 	// 		}
 	//
+	// 		req.user = user;
+	//
+	// 		delete user.password;
+	//
 	// 		res.status(200)
-	// 			.json(users);
-	// 	});
-	// },
-
-	// RETURN CURRENT USER //
-	me: function(req, res, next) {
-		// If user isnt on the session, then return error status
-		if (!req.user) {
-			console.log('Current user not found');
-
-			return res.status(401)
-				.send('current user not defined');
-		}
-
-		// Remove password for security
-		var user = req.user;
-
-		delete user.password;
-
-		// Return user
-		return res.status(200)
-			.json(user);
-	},
-
-	update: function(req, res, next) {
-		console.log('Starting update');
-
-		var updateUser = req.body;
-		updateUser.id = req.user.id;
-		db.users.save(updateUser, function(err, user) {
-			if (err) {
-				console.log('User update error', err);
-
-				return res.status(401)
-					.send(err);
-			}
-
-			req.user = user;
-
-			delete user.password;
-
-			res.status(200)
-				.json(user);
-		});
+	// 			.json(user);
+		// });
 	}
 };

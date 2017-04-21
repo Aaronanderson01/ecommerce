@@ -11,5 +11,10 @@
     </ul>
     <hr>
 </div>
+<div class="" ng-repeat ="product in ShopProducts">
+{{product.title}}
+<img ng-src="{{product.MainImage.url_170x135}}" alt="" />
+{{product.description}}
+</div>
 <!-- <carousel-dir ng-hide="hide"></carousel-dir> -->
 <ui-view></ui-view>
